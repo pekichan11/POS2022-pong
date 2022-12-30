@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/POS2022_pong.dir/main.cpp.o -o POS2022_pong 
+/usr/bin/c++ -g CMakeFiles/POS2022_pong.dir/main.cpp.o CMakeFiles/POS2022_pong.dir/server.cpp.o -o POS2022_pong 

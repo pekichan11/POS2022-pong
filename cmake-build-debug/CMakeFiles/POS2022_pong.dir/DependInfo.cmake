@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pekar28/tmp/tmp.RVuAH1ad1G/main.cpp" "/home/pekar28/tmp/tmp.RVuAH1ad1G/cmake-build-debug/CMakeFiles/POS2022_pong.dir/main.cpp.o"
+  "/home/pekar28/tmp/tmp.RVuAH1ad1G/server.cpp" "/home/pekar28/tmp/tmp.RVuAH1ad1G/cmake-build-debug/CMakeFiles/POS2022_pong.dir/server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -85,6 +85,12 @@
 		<Unit filename="/home/pekar28/tmp/tmp.RVuAH1ad1G/main.cpp">
 			<Option target="POS2022_pong"/>
 		</Unit>
+		<Unit filename="/home/pekar28/tmp/tmp.RVuAH1ad1G/server.cpp">
+			<Option target="POS2022_pong"/>
+		</Unit>
+		<Unit filename="/home/pekar28/tmp/tmp.RVuAH1ad1G/server.h">
+			<Option target="POS2022_pong"/>
+		</Unit>
 		<Unit filename="/home/pekar28/tmp/tmp.RVuAH1ad1G/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

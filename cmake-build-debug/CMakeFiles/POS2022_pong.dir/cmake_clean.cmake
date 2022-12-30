@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/POS2022_pong.dir/main.cpp.o"
+  "CMakeFiles/POS2022_pong.dir/server.cpp.o"
   "POS2022_pong"
   "POS2022_pong.pdb"
 )
