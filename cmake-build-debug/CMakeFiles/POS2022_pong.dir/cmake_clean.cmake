@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/POS2022_pong.dir/main.cpp.o"
-  "CMakeFiles/POS2022_pong.dir/server.cpp.o"
-  "POS2022_pong"
+  "CMakeFiles/POS2022_pong.dir/main.cpp.obj"
+  "CMakeFiles/POS2022_pong.dir/main.cpp.obj.d"
+  "CMakeFiles/POS2022_pong.dir/server.cpp.obj"
+  "CMakeFiles/POS2022_pong.dir/server.cpp.obj.d"
+  "POS2022_pong.exe"
+  "POS2022_pong.exe.manifest"
   "POS2022_pong.pdb"
+  "libPOS2022_pong.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
