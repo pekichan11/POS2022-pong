@@ -128,6 +128,54 @@ POS2022_pong/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/build
 .PHONY : POS2022_pong/fast
 
+Ball/Ball.obj: Ball/Ball.cpp.obj
+.PHONY : Ball/Ball.obj
+
+# target to build an object file
+Ball/Ball.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj
+.PHONY : Ball/Ball.cpp.obj
+
+Ball/Ball.i: Ball/Ball.cpp.i
+.PHONY : Ball/Ball.i
+
+# target to preprocess a source file
+Ball/Ball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.i
+.PHONY : Ball/Ball.cpp.i
+
+Ball/Ball.s: Ball/Ball.cpp.s
+.PHONY : Ball/Ball.s
+
+# target to generate assembly for a file
+Ball/Ball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.s
+.PHONY : Ball/Ball.cpp.s
+
+Platform/Platform.obj: Platform/Platform.cpp.obj
+.PHONY : Platform/Platform.obj
+
+# target to build an object file
+Platform/Platform.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj
+.PHONY : Platform/Platform.cpp.obj
+
+Platform/Platform.i: Platform/Platform.cpp.i
+.PHONY : Platform/Platform.i
+
+# target to preprocess a source file
+Platform/Platform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.i
+.PHONY : Platform/Platform.cpp.i
+
+Platform/Platform.s: Platform/Platform.cpp.s
+.PHONY : Platform/Platform.s
+
+# target to generate assembly for a file
+Platform/Platform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.s
+.PHONY : Platform/Platform.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -185,6 +233,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... POS2022_pong
+	@echo ... Ball/Ball.obj
+	@echo ... Ball/Ball.i
+	@echo ... Ball/Ball.s
+	@echo ... Platform/Platform.obj
+	@echo ... Platform/Platform.i
+	@echo ... Platform/Platform.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

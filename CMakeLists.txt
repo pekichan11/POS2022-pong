@@ -3,7 +3,8 @@ project(POS2022_pong)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(POS2022_pong main.cpp server.cpp server.h)
+add_executable(POS2022_pong main.cpp server.cpp server.h Ball/Ball.cpp Ball/Ball.h
+        Platform/Platform.cpp Platform/Platform.h)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR ${PROJECT_SOURCE_DIR}/SFML/lib/cmake/SFML)

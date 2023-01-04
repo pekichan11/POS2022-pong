@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj"
+  "CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj.d"
+  "CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj"
+  "CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj.d"
   "CMakeFiles/POS2022_pong.dir/main.cpp.obj"
   "CMakeFiles/POS2022_pong.dir/main.cpp.obj.d"
   "CMakeFiles/POS2022_pong.dir/server.cpp.obj"

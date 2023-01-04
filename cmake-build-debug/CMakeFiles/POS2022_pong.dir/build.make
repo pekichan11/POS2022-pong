@@ -98,16 +98,50 @@ CMakeFiles/POS2022_pong.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POS2022_pong.dir/server.cpp.s"
 	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cerve\CLionProjects\POS2022-pong\server.cpp -o CMakeFiles\POS2022_pong.dir\server.cpp.s
 
+CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj: CMakeFiles/POS2022_pong.dir/flags.make
+CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj: CMakeFiles/POS2022_pong.dir/includes_CXX.rsp
+CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj: C:/Users/cerve/CLionProjects/POS2022-pong/Ball/Ball.cpp
+CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj: CMakeFiles/POS2022_pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj -MF CMakeFiles\POS2022_pong.dir\Ball\Ball.cpp.obj.d -o CMakeFiles\POS2022_pong.dir\Ball\Ball.cpp.obj -c C:\Users\cerve\CLionProjects\POS2022-pong\Ball\Ball.cpp
+
+CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.i"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cerve\CLionProjects\POS2022-pong\Ball\Ball.cpp > CMakeFiles\POS2022_pong.dir\Ball\Ball.cpp.i
+
+CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.s"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cerve\CLionProjects\POS2022-pong\Ball\Ball.cpp -o CMakeFiles\POS2022_pong.dir\Ball\Ball.cpp.s
+
+CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj: CMakeFiles/POS2022_pong.dir/flags.make
+CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj: CMakeFiles/POS2022_pong.dir/includes_CXX.rsp
+CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj: C:/Users/cerve/CLionProjects/POS2022-pong/Platform/Platform.cpp
+CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj: CMakeFiles/POS2022_pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj -MF CMakeFiles\POS2022_pong.dir\Platform\Platform.cpp.obj.d -o CMakeFiles\POS2022_pong.dir\Platform\Platform.cpp.obj -c C:\Users\cerve\CLionProjects\POS2022-pong\Platform\Platform.cpp
+
+CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.i"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cerve\CLionProjects\POS2022-pong\Platform\Platform.cpp > CMakeFiles\POS2022_pong.dir\Platform\Platform.cpp.i
+
+CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.s"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cerve\CLionProjects\POS2022-pong\Platform\Platform.cpp -o CMakeFiles\POS2022_pong.dir\Platform\Platform.cpp.s
+
 # Object files for target POS2022_pong
 POS2022_pong_OBJECTS = \
 "CMakeFiles/POS2022_pong.dir/main.cpp.obj" \
-"CMakeFiles/POS2022_pong.dir/server.cpp.obj"
+"CMakeFiles/POS2022_pong.dir/server.cpp.obj" \
+"CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj" \
+"CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj"
 
 # External object files for target POS2022_pong
 POS2022_pong_EXTERNAL_OBJECTS =
 
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/main.cpp.obj
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/server.cpp.obj
+POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj
+POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/build.make
 POS2022_pong.exe: C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libsfml-system-s-d.a
 POS2022_pong.exe: C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libsfml-window-s-d.a
@@ -126,7 +160,7 @@ POS2022_pong.exe: C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libsfml-sys
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/linklibs.rsp
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/objects1.rsp
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable POS2022_pong.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable POS2022_pong.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\POS2022_pong.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
