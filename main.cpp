@@ -6,14 +6,16 @@
 
 int main()
 {
-    Platform player1(750 - 20, 250);
-    Platform player2(10 , 250);
-    Ball ball(750/2, 250);
+    const int SCREEN_HEIGT = 600;
+    const int SCREEN_WIDTH = 750;
+    Platform player1(SCREEN_WIDTH - 20, SCREEN_HEIGT/2 - 50);
+    Platform player2(10 , SCREEN_HEIGT/2 - 50);
+    Ball ball(SCREEN_WIDTH/2, SCREEN_HEIGT/2 - 50);
 
     int counter1 = 0;
     int counter2 = 0;
 
-    sf::RenderWindow window(sf::VideoMode(750, 600), "Pong");
+    sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGT), "Pong");
 
     while (window.isOpen())
     {
@@ -27,19 +29,27 @@ int main()
 
         //Controls
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            player1.moveUp();
+            if (player1.getPosition().y > 0) {
+                player1.moveUp();
+            }
         }
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            player1.moveDown();
+            if (player1.getPosition().y < SCREEN_HEIGT - 100) {
+                player1.moveDown();
+            }
         }
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-            player2.moveUp();
+            if (player2.getPosition().y > 0) {
+                player2.moveUp();
+            }
         }
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-            player2.moveDown();
+            if (player2.getPosition().y < SCREEN_HEIGT - 100) {
+                player2.moveDown();
+            }
         }
 
         //Basic logic
