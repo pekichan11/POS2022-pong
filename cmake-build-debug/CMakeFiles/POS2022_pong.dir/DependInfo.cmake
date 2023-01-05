@@ -1,16 +1,17 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pekar28/tmp/tmp.RVuAH1ad1G/main.cpp" "/home/pekar28/tmp/tmp.RVuAH1ad1G/cmake-build-debug/CMakeFiles/POS2022_pong.dir/main.cpp.o"
-  "/home/pekar28/tmp/tmp.RVuAH1ad1G/server.cpp" "/home/pekar28/tmp/tmp.RVuAH1ad1G/cmake-build-debug/CMakeFiles/POS2022_pong.dir/server.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/cerve/CLionProjects/POS2022-pong/Ball/Ball.cpp" "CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj" "gcc" "CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj.d"
+  "C:/Users/cerve/CLionProjects/POS2022-pong/Platform/Platform.cpp" "CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj" "gcc" "CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj.d"
+  "C:/Users/cerve/CLionProjects/POS2022-pong/main.cpp" "CMakeFiles/POS2022_pong.dir/main.cpp.obj" "gcc" "CMakeFiles/POS2022_pong.dir/main.cpp.obj.d"
+  "C:/Users/cerve/CLionProjects/POS2022-pong/server.cpp" "CMakeFiles/POS2022_pong.dir/server.cpp.obj" "gcc" "CMakeFiles/POS2022_pong.dir/server.cpp.obj.d"
   )
 
 # Targets to which this target links.
