@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-sf::TcpSocket* client::runTcpClient(unsigned short port, std::string ip) {
+sf::TcpSocket* client::runTcpClient(int port, std::string ip) {
 
     sf::IpAddress server = ip;
 
