@@ -152,6 +152,78 @@ Ball/Ball.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.s
 .PHONY : Ball/Ball.cpp.s
 
+FileHandling/FileRead.obj: FileHandling/FileRead.cpp.obj
+.PHONY : FileHandling/FileRead.obj
+
+# target to build an object file
+FileHandling/FileRead.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj
+.PHONY : FileHandling/FileRead.cpp.obj
+
+FileHandling/FileRead.i: FileHandling/FileRead.cpp.i
+.PHONY : FileHandling/FileRead.i
+
+# target to preprocess a source file
+FileHandling/FileRead.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.i
+.PHONY : FileHandling/FileRead.cpp.i
+
+FileHandling/FileRead.s: FileHandling/FileRead.cpp.s
+.PHONY : FileHandling/FileRead.s
+
+# target to generate assembly for a file
+FileHandling/FileRead.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.s
+.PHONY : FileHandling/FileRead.cpp.s
+
+FileHandling/FileWrite.obj: FileHandling/FileWrite.cpp.obj
+.PHONY : FileHandling/FileWrite.obj
+
+# target to build an object file
+FileHandling/FileWrite.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj
+.PHONY : FileHandling/FileWrite.cpp.obj
+
+FileHandling/FileWrite.i: FileHandling/FileWrite.cpp.i
+.PHONY : FileHandling/FileWrite.i
+
+# target to preprocess a source file
+FileHandling/FileWrite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.i
+.PHONY : FileHandling/FileWrite.cpp.i
+
+FileHandling/FileWrite.s: FileHandling/FileWrite.cpp.s
+.PHONY : FileHandling/FileWrite.s
+
+# target to generate assembly for a file
+FileHandling/FileWrite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.s
+.PHONY : FileHandling/FileWrite.cpp.s
+
+Game/Game.obj: Game/Game.cpp.obj
+.PHONY : Game/Game.obj
+
+# target to build an object file
+Game/Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj
+.PHONY : Game/Game.cpp.obj
+
+Game/Game.i: Game/Game.cpp.i
+.PHONY : Game/Game.i
+
+# target to preprocess a source file
+Game/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Game/Game.cpp.i
+.PHONY : Game/Game.cpp.i
+
+Game/Game.s: Game/Game.cpp.s
+.PHONY : Game/Game.s
+
+# target to generate assembly for a file
+Game/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POS2022_pong.dir\build.make CMakeFiles/POS2022_pong.dir/Game/Game.cpp.s
+.PHONY : Game/Game.cpp.s
+
 Platform/Platform.obj: Platform/Platform.cpp.obj
 .PHONY : Platform/Platform.obj
 
@@ -236,6 +308,15 @@ help:
 	@echo ... Ball/Ball.obj
 	@echo ... Ball/Ball.i
 	@echo ... Ball/Ball.s
+	@echo ... FileHandling/FileRead.obj
+	@echo ... FileHandling/FileRead.i
+	@echo ... FileHandling/FileRead.s
+	@echo ... FileHandling/FileWrite.obj
+	@echo ... FileHandling/FileWrite.i
+	@echo ... FileHandling/FileWrite.s
+	@echo ... Game/Game.obj
+	@echo ... Game/Game.i
+	@echo ... Game/Game.s
 	@echo ... Platform/Platform.obj
 	@echo ... Platform/Platform.i
 	@echo ... Platform/Platform.s

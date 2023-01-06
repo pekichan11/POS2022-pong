@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj"
   "CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj.d"
+  "CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj"
+  "CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj.d"
+  "CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj"
+  "CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj.d"
+  "CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj"
+  "CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj.d"
   "CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj"
   "CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj.d"
   "CMakeFiles/POS2022_pong.dir/main.cpp.obj"

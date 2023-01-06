@@ -128,12 +128,60 @@ CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.s"
 	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cerve\CLionProjects\POS2022-pong\Platform\Platform.cpp -o CMakeFiles\POS2022_pong.dir\Platform\Platform.cpp.s
 
+CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj: CMakeFiles/POS2022_pong.dir/flags.make
+CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj: CMakeFiles/POS2022_pong.dir/includes_CXX.rsp
+CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj: C:/Users/cerve/CLionProjects/POS2022-pong/FileHandling/FileRead.cpp
+CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj: CMakeFiles/POS2022_pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj -MF CMakeFiles\POS2022_pong.dir\FileHandling\FileRead.cpp.obj.d -o CMakeFiles\POS2022_pong.dir\FileHandling\FileRead.cpp.obj -c C:\Users\cerve\CLionProjects\POS2022-pong\FileHandling\FileRead.cpp
+
+CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.i"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cerve\CLionProjects\POS2022-pong\FileHandling\FileRead.cpp > CMakeFiles\POS2022_pong.dir\FileHandling\FileRead.cpp.i
+
+CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.s"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cerve\CLionProjects\POS2022-pong\FileHandling\FileRead.cpp -o CMakeFiles\POS2022_pong.dir\FileHandling\FileRead.cpp.s
+
+CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj: CMakeFiles/POS2022_pong.dir/flags.make
+CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj: CMakeFiles/POS2022_pong.dir/includes_CXX.rsp
+CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj: C:/Users/cerve/CLionProjects/POS2022-pong/FileHandling/FileWrite.cpp
+CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj: CMakeFiles/POS2022_pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj -MF CMakeFiles\POS2022_pong.dir\FileHandling\FileWrite.cpp.obj.d -o CMakeFiles\POS2022_pong.dir\FileHandling\FileWrite.cpp.obj -c C:\Users\cerve\CLionProjects\POS2022-pong\FileHandling\FileWrite.cpp
+
+CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.i"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cerve\CLionProjects\POS2022-pong\FileHandling\FileWrite.cpp > CMakeFiles\POS2022_pong.dir\FileHandling\FileWrite.cpp.i
+
+CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.s"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cerve\CLionProjects\POS2022-pong\FileHandling\FileWrite.cpp -o CMakeFiles\POS2022_pong.dir\FileHandling\FileWrite.cpp.s
+
+CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj: CMakeFiles/POS2022_pong.dir/flags.make
+CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj: CMakeFiles/POS2022_pong.dir/includes_CXX.rsp
+CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj: C:/Users/cerve/CLionProjects/POS2022-pong/Game/Game.cpp
+CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj: CMakeFiles/POS2022_pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj -MF CMakeFiles\POS2022_pong.dir\Game\Game.cpp.obj.d -o CMakeFiles\POS2022_pong.dir\Game\Game.cpp.obj -c C:\Users\cerve\CLionProjects\POS2022-pong\Game\Game.cpp
+
+CMakeFiles/POS2022_pong.dir/Game/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POS2022_pong.dir/Game/Game.cpp.i"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cerve\CLionProjects\POS2022-pong\Game\Game.cpp > CMakeFiles\POS2022_pong.dir\Game\Game.cpp.i
+
+CMakeFiles/POS2022_pong.dir/Game/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POS2022_pong.dir/Game/Game.cpp.s"
+	C:\Users\cerve\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8214.51\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\cerve\CLionProjects\POS2022-pong\Game\Game.cpp -o CMakeFiles\POS2022_pong.dir\Game\Game.cpp.s
+
 # Object files for target POS2022_pong
 POS2022_pong_OBJECTS = \
 "CMakeFiles/POS2022_pong.dir/main.cpp.obj" \
 "CMakeFiles/POS2022_pong.dir/server.cpp.obj" \
 "CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj" \
-"CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj"
+"CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj" \
+"CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj" \
+"CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj" \
+"CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj"
 
 # External object files for target POS2022_pong
 POS2022_pong_EXTERNAL_OBJECTS =
@@ -142,6 +190,9 @@ POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/main.cpp.obj
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/server.cpp.obj
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/Ball/Ball.cpp.obj
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/Platform/Platform.cpp.obj
+POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/FileHandling/FileRead.cpp.obj
+POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/FileHandling/FileWrite.cpp.obj
+POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/Game/Game.cpp.obj
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/build.make
 POS2022_pong.exe: C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libsfml-system-s-d.a
 POS2022_pong.exe: C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libsfml-window-s-d.a
@@ -160,7 +211,7 @@ POS2022_pong.exe: C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libsfml-sys
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/linklibs.rsp
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/objects1.rsp
 POS2022_pong.exe: CMakeFiles/POS2022_pong.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable POS2022_pong.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\cerve\CLionProjects\POS2022-pong\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable POS2022_pong.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\POS2022_pong.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
