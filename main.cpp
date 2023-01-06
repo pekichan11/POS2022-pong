@@ -7,6 +7,7 @@
 #include <SFML/Network.hpp>
 #include "server/server.h"
 #include "client/client.h"
+#include <string.h>
 
 
 int main(int argc, char * argv[]) {
