@@ -3,7 +3,7 @@ project(POS2022_pong)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(POS2022_pong main.cpp server.cpp server.h Ball/Ball.cpp Ball/Ball.h
+add_executable(POS2022_pong main.cpp server/server.cpp server/server.h client/client.cpp client/client.cpp Ball/Ball.cpp Ball/Ball.h
         Platform/Platform.cpp Platform/Platform.h FileHandling/FileRead.cpp FileHandling/FileRead.h
         FileHandling/FileWrite.cpp FileHandling/FileWrite.h ThreadData/ThreadData.h Game/Game.cpp Game/Game.h)
 
