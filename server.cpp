@@ -1,38 +1,37 @@
 
 #include <cstring>
-#include <SFML/Network.hpp>
 #include <iostream>
-#include <iomanip>
 #include "server.h"
 
-int server::spustiServer(unsigned short port) {
+sf::TcpSocket* server::spustiServer(unsigned short port) {
 
-    sf::TcpSocket socket;
+    sf::TcpSocket* socket;
 
     char buffer[2000];
-    std::size_t recieved;
+    std::size_t received;
 
     sf::TcpListener listener;
 
 
     if (listener.listen(port) != sf::Socket::Status::Done) {
-        return 1;
+        return nullptr;
     }
     std::cout << "server is listening to port " <<
         port << "waiting for connection " << std::endl;
 
-    if (listener.accept(socket) != sf::Socket::Status::Done) {
-        return 2;
+    if (listener.accept(*socket) != sf::Socket::Status::Done) {
+        return nullptr;
     }
-    std::cout << "Client connected: " << socket.getRemoteAddress() << std::endl;
+    std::cout << "Client connected: " << socket->getRemoteAddress() << std::endl;
 
 
-    socket.receive(buffer, sizeof(buffer), recieved);
+    socket->receive(buffer, sizeof(buffer), received);
     std::cout << buffer << std::endl;
     std::string text = "server is comunicating with client";
     system("puase");
-    socket.send(text.c_str(), text.length() + 1);
-    //tu sa spusti hra dorobit bool hodnotu ci hra bezi
+    socket->send(text.c_str(), text.length() + 1);
+
+    return socket;
 
 
 }

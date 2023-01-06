@@ -4,31 +4,51 @@ Game::Game() = default;
 
 void Game::play() {
     sf::RenderWindow window(sf::VideoMode(this->windowWidth, this->windowHeight), "Pong");
+    std::string socketText = "n";
+
+    char buffer[1];
+    std::size_t recieved;
 
     while (window.isOpen()) {
         sf::Event event{};
-
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
+        socketText = "n";
         //Controls
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             this->player1.moveUp();
+            socketText = "u";
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
             this->player1.moveDown();
+            socketText = "d";
         }
+        this->socket->send(socketText.c_str(), socketText.length() + 1);
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+
+        //recieving data from socket
+        socketText = "n";
+        this->socket->receive(buffer, sizeof(buffer), recieved);
+        socketText = buffer;
+
+        if (socketText.compare("u")) {
             this->player2.moveUp();
         }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+        if (socketText.compare("d")) {
             this->player2.moveDown();
         }
+
+//        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+//            this->player2.moveUp();
+//        }
+//
+//        if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+//            this->player2.moveDown();
+//        }
 
         //Basic logic
         this->ball.reboundSides(this->playableHeight);

@@ -2,9 +2,10 @@
 #define POS2022_PONG_CLIENT_H
 
 #include <string>
+#include <SFML/Network.hpp>
 
 class client {
-    void runTcpClient(unsigned short port, std::string ip);
+    sf::TcpSocket* runTcpClient(unsigned short port, std::string ip);
 };
 
 #endif //POS2022_PONG_CLIENT_H
