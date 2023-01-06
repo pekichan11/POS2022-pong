@@ -6,7 +6,7 @@
 class server {
 public:
     server() = default;
-    int spustiServer(int argc, char* argv[]);
+    int spustiServer(unsigned short port);
 };
 
 
