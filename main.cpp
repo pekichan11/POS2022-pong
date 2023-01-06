@@ -5,8 +5,8 @@
 #include "FileHandling/FileWrite.h"
 #include "Game/Game.h"
 #include <SFML/Network.hpp>
-#include "server.h"
-#include "client.h"
+#include "server/server.h"
+#include "client/client.h"
 
 
 int main(int argc, char * argv[]) {
