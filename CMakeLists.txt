@@ -7,6 +7,8 @@ add_executable(POS2022_pong main.cpp server.cpp server.h Ball/Ball.cpp Ball/Ball
         Platform/Platform.cpp Platform/Platform.h FileHandling/FileRead.cpp FileHandling/FileRead.h
         FileHandling/FileWrite.cpp FileHandling/FileWrite.h ThreadData/ThreadData.h Game/Game.cpp Game/Game.h)
 
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR ${PROJECT_SOURCE_DIR}/SFML/lib/cmake/SFML)
 find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
