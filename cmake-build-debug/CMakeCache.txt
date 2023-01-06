@@ -253,9 +253,6 @@ FLAC_LIB:FILEPATH=C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libFLAC.a
 //Path to a library.
 FreeType_LIB:FILEPATH=C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libfreetype.a
 
-//mwindows for MinGW
-MINGW32_LIBRARY:STRING=mingw32;-mwindows
-
 //Path to a library.
 Ogg_LIB:FILEPATH=C:/Users/cerve/CLionProjects/POS2022-pong/SFML/lib/libogg.a
 
@@ -270,21 +267,6 @@ POS2022_pong_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 POS2022_pong_SOURCE_DIR:STATIC=C:/Users/cerve/CLionProjects/POS2022-pong
-
-//Path to a library.
-SDL2MAIN_LIBRARY:FILEPATH=SDL2MAIN_LIBRARY-NOTFOUND
-
-//The directory containing a CMake configuration file for SDL2.
-SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
-
-//Path to a file.
-SDL2_INCLUDE_DIR:PATH=SDL2_INCLUDE_DIR-NOTFOUND
-
-//Path to a library.
-SDL2_LIBRARY_TEMP:FILEPATH=SDL2_LIBRARY_TEMP-NOTFOUND
-
-//The directory containing a CMake configuration file for SFML.
-SFML_DIR:PATH=SFML_DIR-NOTFOUND
 
 //Path to a file.
 SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
@@ -389,8 +371,6 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
-//Test CMAKE_HAVE_LIBC_PTHREAD
-CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/cerve/CLionProjects/POS2022-pong
@@ -465,8 +445,6 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: FLAC_LIB
 FLAC_LIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FreeType_LIB

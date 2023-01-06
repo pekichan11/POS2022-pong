@@ -92,10 +92,31 @@
 		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/Ball/Ball.h">
 			<Option target="POS2022_pong"/>
 		</Unit>
+		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/FileHandling/FileRead.cpp">
+			<Option target="POS2022_pong"/>
+		</Unit>
+		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/FileHandling/FileRead.h">
+			<Option target="POS2022_pong"/>
+		</Unit>
+		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/FileHandling/FileWrite.cpp">
+			<Option target="POS2022_pong"/>
+		</Unit>
+		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/FileHandling/FileWrite.h">
+			<Option target="POS2022_pong"/>
+		</Unit>
+		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/Game/Game.cpp">
+			<Option target="POS2022_pong"/>
+		</Unit>
+		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/Game/Game.h">
+			<Option target="POS2022_pong"/>
+		</Unit>
 		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/Platform/Platform.cpp">
 			<Option target="POS2022_pong"/>
 		</Unit>
 		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/Platform/Platform.h">
+			<Option target="POS2022_pong"/>
+		</Unit>
+		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/ThreadData/ThreadData.h">
 			<Option target="POS2022_pong"/>
 		</Unit>
 		<Unit filename="C:/Users/cerve/CLionProjects/POS2022-pong/main.cpp">
