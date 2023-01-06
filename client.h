@@ -5,6 +5,7 @@
 #include <SFML/Network.hpp>
 
 class client {
+public:
     sf::TcpSocket* runTcpClient(unsigned short port, std::string ip);
 };
 
