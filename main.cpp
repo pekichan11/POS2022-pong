@@ -24,7 +24,7 @@ int main(int argc, char * argv[]) {
         socket = client.runTcpClient(atoi(argv[2]), argv[3]);
         jeServer = false;
     }
-    if (strcmp(argv[1], "s") != 0 && strcmp(argv[1], "s") != 0) {
+    if (strcmp(argv[1], "s") != 0 && strcmp(argv[1], "c") != 0) {
         std::cout << "Error not specifed server or client " << std::endl;
         return 1;
     }
