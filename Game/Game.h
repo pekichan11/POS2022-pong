@@ -8,6 +8,8 @@
 #include <mutex>
 #include <cstdio>
 #include "../ThreadData/ThreadData.h"
+#include <string.h>
+
 
 #ifndef POS2022_PONG_GAME_H
 #define POS2022_PONG_GAME_H

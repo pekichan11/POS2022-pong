@@ -44,11 +44,11 @@ void Game::play() {
         //recieving data from socket
         socketText = buffer;
         std::cout << "socket text " << socketText << std::endl;
-        if (socketText.compare("u")) {
+        if (strcmp(socketText.c_str(), "u") == 0) {
             this->player2.moveUp();
         }
 
-        if (socketText.compare("d")) {
+        if (strcmp(socketText.c_str(), "d") == 0) {
             this->player2.moveDown();
         }
 
