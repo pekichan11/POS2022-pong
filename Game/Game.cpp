@@ -24,7 +24,7 @@ void Game::play() {
         }
 
 
-        socketText = "n";
+
         //Controls
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             this->player1.moveUp();
@@ -34,6 +34,10 @@ void Game::play() {
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
             this->player1.moveDown();
             socketText = "d";
+        }
+
+        if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) &&  !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            socketText = "n";
         }
 
 
