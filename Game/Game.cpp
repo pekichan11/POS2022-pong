@@ -29,7 +29,7 @@ void Game::play() {
         this->socket->send(socketText.c_str(), socketText.length() + 1);
 
 
-        //recieving data from socket
+        //Receiving data from socket
         socketText = "n";
         this->socket->receive(buffer, sizeof(buffer), recieved);
         socketText = buffer;
