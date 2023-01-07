@@ -6,6 +6,7 @@
 
 class client {
 public:
+    client() = default;
     sf::TcpSocket* runTcpClient(int port, std::string ip);
 };
 
