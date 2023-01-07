@@ -27,7 +27,7 @@ sf::TcpSocket* server::spustiServer(unsigned short port) {
 
     socket->receive(buffer, sizeof(buffer), received);
     std::cout << buffer << std::endl;
-    std::string text = "server is comunicating with client";
+    std::string text = "server is communicating with client";
     system("pause");
     socket->send(text.c_str(), text.length() + 1);
 
