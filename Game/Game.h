@@ -22,6 +22,7 @@ private:
     int counter1 = 0;
     int counter2 = 0;
 
+    bool server = true;
     Platform player1 = Platform(750 - 20, 250);
     Platform player2 = Platform(10, 250);
     Ball ball = Ball(750 / 2, 250);
@@ -29,7 +30,7 @@ private:
 
 public:
     Game();
-    Game(sf::TcpSocket* socket) : socket(socket) {}
+    Game(sf::TcpSocket* socket, bool server) : socket(socket), server(server) {}
     void play();
     void operator()(void*gData, std::mutex& mutex);
 };

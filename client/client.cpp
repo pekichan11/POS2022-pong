@@ -14,7 +14,7 @@ sf::TcpSocket* client::runTcpClient(unsigned short port, std::string ip) {
     //    return nullptr;
     std::cout << "Connected to server " << server << std::endl;
 
-    std::string text = "new client just connected!";
+    std::string text = " new client just connected! ";
     socket->send(text.c_str() , sizeof(text) + 1);
 
     char buffer[2000];

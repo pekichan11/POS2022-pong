@@ -15,6 +15,15 @@ void Game::play() {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        if (this->server) {
+            this->socket->send(socketText.c_str(), socketText.length() + 1);
+            this->socket->receive(buffer, sizeof(buffer), recieved);
+        } else {
+            this->socket->receive(buffer, sizeof(buffer), recieved);
+            this->socket->send(socketText.c_str(), socketText.length() + 1);
+        }
+
+
         socketText = "n";
         //Controls
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
@@ -26,14 +35,11 @@ void Game::play() {
             this->player1.moveDown();
             socketText = "d";
         }
-        this->socket->send(socketText.c_str(), socketText.length() + 1);
 
 
         //recieving data from socket
-        socketText = "n";
-        this->socket->receive(buffer, sizeof(buffer), recieved);
         socketText = buffer;
-
+        std::cout << "socket text " << socketText << std::endl;
         if (socketText.compare("u")) {
             this->player2.moveUp();
         }
