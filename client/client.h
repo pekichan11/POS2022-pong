@@ -7,7 +7,7 @@
 class client {
 public:
     client() = default;
-    sf::TcpSocket* runTcpClient(int port, std::string ip);
+    sf::TcpSocket* runTcpClient(unsigned short port, std::string ip);
 };
 
 #endif //POS2022_PONG_CLIENT_H
