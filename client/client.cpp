@@ -8,10 +8,9 @@ sf::TcpSocket* client::runTcpClient(unsigned short port, std::string ip) {
 
     sf::TcpSocket* socket = new sf::TcpSocket;
 
-    socket->connect(server, port);
 
-    //if (*socket.connect(server, port) != sf::Socket::Status::Done)
-    //    return nullptr;
+    if (socket->connect(server, port) != sf::Socket::Status::Done)
+        return nullptr;
     std::cout << "Connected to server " << server << std::endl;
 
     std::string text = " new client just connected! ";
@@ -23,8 +22,4 @@ sf::TcpSocket* client::runTcpClient(unsigned short port, std::string ip) {
     socket->receive(buffer, sizeof(buffer), received);
     std::cout << "Message received from the server: " << buffer << std::endl;
     return socket;
-    //game* gameska = new game(socket&);
-
-
-
 }
