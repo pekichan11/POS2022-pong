@@ -35,6 +35,7 @@ public:
     Game(sf::TcpSocket* socket, bool server) : socket(socket), server(server) {}
     void play();
     void operator()(void*gData, std::mutex& mutex);
+    ~Game();
 };
 
 

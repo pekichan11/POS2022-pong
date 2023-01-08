@@ -55,14 +55,6 @@ void Game::play() {
             this->player2.moveDown();
         }
 
-//        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-//            this->player2.moveUp();
-//        }
-//
-//        if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-//            this->player2.moveDown();
-//        }
-
         //Basic logic
         this->ball.reboundSides(this->playableHeight);
         this->ball.passLeft(this->windowWidth, this->playableHeight) ? this->counter1++ : 0;
@@ -125,4 +117,9 @@ void Game::operator()(void *gData, std::mutex& mutex) {
     std::lock_guard<std::mutex> lock(mutex);
     data->results.emplace_back("Another run!");
     play();
+}
+
+Game::~Game() {
+    delete this->socket;
+    this->socket = nullptr;
 }
