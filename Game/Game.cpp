@@ -153,7 +153,7 @@ void Game::operator()(void *gData, std::mutex& mutex) {
     play();
 
     score << "Game from " << std::ctime(&start_time) << " Result: Player1 " << this->counter1
-          << " : Player2 " << this->counter2 << std::endl;
+          << " : Player2 " << this->counter2 << "\n";
     data->results.push_back(score.str());
 
     score.clear();

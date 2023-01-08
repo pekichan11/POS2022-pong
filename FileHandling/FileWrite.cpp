@@ -13,7 +13,7 @@ void FileWrite::operator()(void *gData, std::mutex& mutex) {
 
     std::for_each(data->results.begin(), data->results.end(), [&writeFile](const std::string& line)
     {
-        writeFile << line;
+        writeFile << line << std::endl;
     });
 
     std::cout<<"Writing complete\n";
