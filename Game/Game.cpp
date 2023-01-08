@@ -17,9 +17,10 @@ void Game::play() {
         }
 
         //Controls
-        if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) &&  !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            socketOut = "n";
-        }
+        if (this->server) {
+            if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                socketOut = "n";
+            }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             this->server ? this->player1->moveUp() : this->player2->moveUp();
