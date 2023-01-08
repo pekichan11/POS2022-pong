@@ -120,8 +120,22 @@ void Game::operator()(void *gData, std::mutex& mutex) {
     ThreadData *data = (ThreadData*)gData;
     std::cout << "Game initiated\n";
     std::lock_guard<std::mutex> lock(mutex);
-    data->results.emplace_back("Another run!");
+
+    for (auto line: data->results) {
+        std::cout << line;
+    }
+
+    std::stringstream score;
+    auto start = std::chrono::system_clock::now();
+    std::time_t start_time = std::chrono::system_clock::to_time_t(start);
+
     play();
+
+    score << "Game from " << std::ctime(&start_time) << " Result: Player1 " << this->counter1
+          << " : Player2 " << this->counter2 << std::endl;
+    data->results.emplace_back(score.str());
+
+    score.clear();
 }
 
 
