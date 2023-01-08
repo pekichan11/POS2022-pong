@@ -22,14 +22,29 @@ void Game::play() {
                 socketOut = "n";
             }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            this->server ? this->player1->moveUp() : this->player2->moveUp();
-            socketOut = "u";
-        }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                this->server ? this->player1->moveUp() : this->player2->moveUp();
+                socketOut = "u";
+            }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            this->server ? this->player1->moveDown() : this->player2->moveDown();
-            socketOut = "d";
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+                this->server ? this->player1->moveDown() : this->player2->moveDown();
+                socketOut = "d";
+            }
+        } else {
+            if (!sf::Keyboard::isKeyPressed(sf::Keyboard::S) && !sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+                socketOut = "n";
+            }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+                this->server ? this->player1->moveUp() : this->player2->moveUp();
+                socketOut = "u";
+            }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+                this->server ? this->player1->moveDown() : this->player2->moveDown();
+                socketOut = "d";
+            }
         }
 
 
