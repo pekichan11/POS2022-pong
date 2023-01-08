@@ -8,7 +8,9 @@ void Game::play() {
     std::string socketIn = "n";
     char buffer[2000];
     std::size_t recieved;
-
+    if (!this->server) {
+        this->ball->changeVelocity("x");
+    }
     while (window.isOpen()) {
         sf::Event event{};
         while (window.pollEvent(event)) {
@@ -17,18 +19,34 @@ void Game::play() {
         }
 
         //Controls
-        if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) &&  !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            socketOut = "n";
-        }
+        if (this->server) {
+            if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                socketOut = "n";
+            }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            this->player1->moveUp();
-            socketOut = "u";
-        }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                this->player1->moveUp();
+                socketOut = "u";
+            }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            this->player1->moveDown();
-            socketOut = "d";
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+                this->player1->moveDown();
+                socketOut = "d";
+            }
+        } else {
+            if (!sf::Keyboard::isKeyPressed(sf::Keyboard::W) && !sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+                socketOut = "n";
+            }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+                this->player1->moveUp();
+                socketOut = "u";
+            }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+                this->player1->moveDown();
+                socketOut = "d";
+            }
         }
 
 
