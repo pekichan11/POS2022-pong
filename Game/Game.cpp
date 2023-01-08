@@ -4,9 +4,9 @@ Game::Game() = default;
 
 void Game::play() {
     sf::RenderWindow window(sf::VideoMode(this->windowWidth, this->windowHeight), "Pong");
-    std::string socketText = "n";
-
-    char buffer[1];
+    std::string socketOut = "n";
+    std::string socketIn = "n";
+    char buffer[2000];
     std::size_t recieved;
 
     while (window.isOpen()) {
@@ -15,40 +15,43 @@ void Game::play() {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        if (this->server) {
-            this->socket->send(socketText.c_str(), socketText.length() + 1);
-            this->socket->receive(buffer, sizeof(buffer), recieved);
-        } else {
-            this->socket->receive(buffer, sizeof(buffer), recieved);
-            this->socket->send(socketText.c_str(), socketText.length() + 1);
-        }
+
 
 
 
         //Controls
+        if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) &&  !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            socketOut = "n";
+        }
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             this->player1.moveUp();
-            socketText = "u";
+            socketOut = "u";
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
             this->player1.moveDown();
-            socketText = "d";
-        }
-
-        if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) &&  !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            socketText = "n";
+            socketOut = "d";
         }
 
 
-        //recieving data from socket
-        socketText = buffer;
-        std::cout << "socket text " << socketText << std::endl;
-        if (strcmp(socketText.c_str(), "u") == 0) {
+        recieved = 0;
+        if (this->server) {
+            this->socket->send(socketOut.c_str(), socketOut.length() + 1);
+            this->socket->receive(buffer, sizeof(buffer), recieved);
+        } else {
+            this->socket->receive(buffer, sizeof(buffer), recieved);
+            this->socket->send(socketOut.c_str(), socketOut.length() + 1);
+        }
+        std::cout << "Buffer : " << buffer << std::endl;
+        socketIn = buffer;
+        socketIn = socketIn.substr(0,1);
+        std::cout << "socket text " << socketIn << std::endl;
+        if (strcmp(socketIn.c_str(), "u") == 0) {
             this->player2.moveUp();
         }
 
-        if (strcmp(socketText.c_str(), "d") == 0) {
+        if (strcmp(socketIn.c_str(), "d") == 0) {
             this->player2.moveDown();
         }
 
