@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
+#include <string.h>
 
 #ifndef POS2022_PONG_BALL_H
 #define POS2022_PONG_BALL_H
@@ -24,6 +25,7 @@ public:
     void intersectPlatform();
     bool reboundPlatform();
     void update();
+    void changeVelocity(std::string change);
     double getVelocityX();
     double getVelocityY();
     void stop();

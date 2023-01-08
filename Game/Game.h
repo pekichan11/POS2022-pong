@@ -23,7 +23,7 @@ private:
 
     int counter1 = 0;
     int counter2 = 0;
-
+    bool rozstrel = false;
     bool server = true;
     Platform* player1 = new Platform(this->windowWidth - 20, this->windowHeight/2 - 100);
     Platform* player2 = new Platform(10, 250);

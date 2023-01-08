@@ -57,6 +57,26 @@ void Game::play() {
         this->ball->passLeft(this->windowWidth, this->playableHeight) ? this->counter1++ : 0;
         this->ball->passRight(this->windowWidth, this->playableHeight) ? this->counter2++ : 0;
 
+        if (this->ball->passLeft(this->windowWidth, this->playableHeight) || this->ball->passRight(this->windowWidth, this->playableHeight)) {
+            rozstrel = true;
+        }
+
+        if (rozstrel) {
+            if(this->server) {
+                std::string out = (rand() % 2 == 1 ) ? "y" : "x";
+                this->socket->send(out.c_str(), out.length() + 1);
+                this->ball->changeVelocity(out);
+
+            } else {
+                std::string in;
+                this->socket->receive(buffer, sizeof(buffer), recieved);
+                in = buffer;
+                in = in.substr(0, 1);
+                this->ball->changeVelocity(in);
+            }
+            this->rozstrel = false;
+        }
+
         if (this->ball->getBallFloatRec().intersects(player1->getPlatformFloatRect())) {
             this->ball->reboundPlatform();
         }

@@ -30,8 +30,6 @@ bool Ball::passLeft(int windowWidth, int windowHeight) {
         this->ballPosition.x = windowWidth / 2;
         this->ballPosition.y = windowHeight / 2;
 
-        (rand() % 2 == 1) ? this->ballVelocityY *= -1 : this->ballVelocityX *= -1;
-
         return true;
     }
     return false;
@@ -41,8 +39,6 @@ bool Ball::passRight(int windowWidth, int windowHeight) {
     if (this->ballPosition.x > windowWidth + 10) {
         this->ballPosition.x = windowWidth / 2;
         this->ballPosition.y = windowHeight / 2;
-
-        (rand() % 2 == 1) ? this->ballVelocityY *= -1 : this->ballVelocityX *= -1;
 
         return true;
     }
@@ -90,5 +86,13 @@ void Ball::go() {
 
 Ball::~Ball() {
 
+}
+
+void Ball::changeVelocity(std::string change) {
+    if (strcmp(change.c_str(), "y") == 0) {
+        this->ballVelocityY *= -1;
+    } else {
+        this->ballVelocityX *= -1;
+    }
 }
 
