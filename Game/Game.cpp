@@ -69,7 +69,6 @@ void Game::play() {
 
             if(this->server) {
                 std::string out = (rand() % 2 == 0 ) ? "y" : "x";
-                std::cout << out << std::endl;
                 this->socket->send(out.c_str(), out.length() + 1);
                 this->ball->changeVelocity(out);
 
@@ -78,7 +77,6 @@ void Game::play() {
                 this->socket->receive(buffer, sizeof(buffer), recieved);
                 in = buffer;
                 in = in.substr(0, 1);
-                std::cout << in << std::endl;
                 this->ball->changeVelocity(in);
             }
             this->rozstrel = false;
