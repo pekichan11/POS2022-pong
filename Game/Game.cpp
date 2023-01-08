@@ -64,6 +64,9 @@ void Game::play() {
         }
 
         if (rozstrel) {
+            this->player1->setPlatform(this->windowWidth - 20, this->windowHeight/2 - 100);
+            this->player2->setPlatform(10, this->windowHeight/2 - 100);
+
             if(this->server) {
                 std::string out = (rand() % 2 == 0 ) ? "y" : "x";
                 std::cout << out << std::endl;
