@@ -26,7 +26,7 @@ private:
     bool rozstrel = false;
     bool server = true;
     Platform* player1 = new Platform(this->windowWidth - 20, this->windowHeight/2 - 100);
-    Platform* player2 = new Platform(10, 250);
+    Platform* player2 = new Platform(10, this->windowHeight/2 - 100);
     Ball* ball = new Ball(this->windowWidth / 2, this->windowHeight/2 - 100);
     sf::TcpSocket* socket;
 
