@@ -17,15 +17,15 @@ int main(int argc, char * argv[]) {
     sf::TcpSocket* socket;
     bool jeServer;
     if (strcmp(argv[1], "s") == 0) {
-        socket = server.runServer(atoi(argv[2]));
+        socket = server::runServer(atoi(argv[2]));
         jeServer = true;
     }
     if (strcmp(argv[1], "c") == 0){
-        socket = client.runTcpClient(atoi(argv[2]), argv[3]);
+        socket = client::runTcpClient(atoi(argv[2]), argv[3]);
         jeServer = false;
     }
     if (strcmp(argv[1], "s") != 0 && strcmp(argv[1], "c") != 0) {
-        std::cout << "Error not specifed server or client " << std::endl;
+        std::cout << "Error not specified server or client " << std::endl;
         return 1;
     }
 

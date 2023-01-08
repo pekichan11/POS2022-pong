@@ -113,7 +113,7 @@ void Game::play() {
 
 void Game::operator()(void *gData, std::mutex& mutex) {
     ThreadData *data = (ThreadData*)gData;
-    fprintf(stderr, "Game initiated\n");
+    std::cout << "Game initiated\n";
     std::lock_guard<std::mutex> lock(mutex);
     data->results.emplace_back("Another run!");
     play();
