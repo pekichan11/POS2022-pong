@@ -3,7 +3,7 @@
 Game::Game() = default;
 
 void Game::play() {
-    sf::RenderWindow window(sf::VideoMode(this->windowWidth, this->windowHeight), "Pong");
+    sf::RenderWindow window(sf::VideoMode(this->windowWidth, this->windowHeight), this->server? "Pong" : "client");
     std::string socketOut = "n";
     std::string socketIn = "n";
     char buffer[2000];
