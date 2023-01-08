@@ -28,17 +28,19 @@ int main(int argc, char * argv[]) {
         std::cout << "Error not specifed server or client " << std::endl;
         return 1;
     }
-    std::mutex mutex;
+    std::mutex* mutex = new std::mutex();
     std::list<std::string> results = {};
     ThreadData data = {5, results};
 
-    std::thread fileRead(FileRead(), &data, std::ref(mutex));
-    std::thread play(Game(socket, jeServer), &data, std::ref(mutex));
-    std::thread fileWrite(FileWrite(), &data, std::ref(mutex));
+    std::thread fileRead(FileRead(), &data, std::ref(*mutex));
+    std::thread play(Game(socket, jeServer), &data, std::ref(*mutex));
+    std::thread fileWrite(FileWrite(), &data, std::ref(*mutex));
 
     fileRead.join();
     play.join();
-    fileRead.join();
+    fileWrite.join();
+
+    delete mutex;
 
     return 0;
 }
