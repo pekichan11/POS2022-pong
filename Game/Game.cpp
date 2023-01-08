@@ -23,12 +23,12 @@ void Game::play() {
             }
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-                this->server ? this->player1->moveUp() : this->player2->moveUp();
+                this->player1->moveUp();
                 socketOut = "u";
             }
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-                this->server ? this->player1->moveDown() : this->player2->moveDown();
+                this->player1->moveDown();
                 socketOut = "d";
             }
         } else {
@@ -37,12 +37,12 @@ void Game::play() {
             }
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-                this->server ? this->player1->moveUp() : this->player2->moveUp();
+                this->player2->moveUp();
                 socketOut = "u";
             }
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-                this->server ? this->player1->moveDown() : this->player2->moveDown();
+                this->player2->moveDown();
                 socketOut = "d";
             }
         }
@@ -81,8 +81,8 @@ void Game::play() {
         }
 
         if (rozstrel) {
-            this->player1->setPlatform(this->windowWidth - 20, this->windowHeight/2 - 100);
-            this->player2->setPlatform(10, this->windowHeight/2 - 100);
+            //this->player1->setPlatform(this->windowWidth - 20, this->windowHeight/2 - 100);
+            //this->player2->setPlatform(10, this->windowHeight/2 - 100);
 
             if(this->server) {
                 std::string out = (rand() % 2 == 0 ) ? "y" : "x";
