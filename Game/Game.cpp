@@ -22,12 +22,12 @@ void Game::play() {
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            this->player1->moveUp();
+            this->server ? this->player1->moveUp() : this->player2->moveUp();
             socketOut = "u";
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            this->player1->moveDown();
+            this->server ? this->player1->moveDown() : this->player2->moveDown();
             socketOut = "d";
         }
 
@@ -45,11 +45,12 @@ void Game::play() {
         socketIn = socketIn.substr(0,1);
 
         if (strcmp(socketIn.c_str(), "u") == 0) {
-            this->player2->moveUp();
+            this->server ? this->player2->moveUp() : this->player1->moveUp();
+
         }
 
         if (strcmp(socketIn.c_str(), "d") == 0) {
-            this->player2->moveDown();
+            this->server ? this->player2->moveDown() : this->player1->moveDown();
         }
 
         //Basic logic
