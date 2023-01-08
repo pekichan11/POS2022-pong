@@ -18,6 +18,7 @@ public:
     void moveUp();
     void moveDown();
     void update();
+    void setPlatform(int x, int y);
 };
 
 #endif //POS2022_PONG_PLATFORM_H
