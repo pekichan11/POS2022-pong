@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Ball.h"
 
 Ball::Ball(double x, double y) {
@@ -89,6 +90,7 @@ Ball::~Ball() {
 }
 
 void Ball::changeVelocity(std::string change) {
+    std::cout << change  << " ball vypis " << std::endl;
     if (strcmp(change.c_str(), "y") == 0) {
         this->ballVelocityY *= -1;
     } else {

@@ -41,6 +41,9 @@ void Game::play() {
             this->socket->send(socketOut.c_str(), socketOut.length() + 1);
         }
 
+        socketIn = buffer;
+        socketIn = socketIn.substr(0,1);
+
         if (strcmp(socketIn.c_str(), "u") == 0) {
             this->player2->moveUp();
         }
@@ -51,11 +54,13 @@ void Game::play() {
 
         //Basic logic
         this->ball->reboundSides(this->playableHeight);
-        this->ball->passLeft(this->windowWidth, this->playableHeight) ? this->counter1++ : 0;
-        this->ball->passRight(this->windowWidth, this->playableHeight) ? this->counter2++ : 0;
-
-        if (this->ball->passLeft(this->windowWidth, this->playableHeight) || this->ball->passRight(this->windowWidth, this->playableHeight)) {
-            rozstrel = true;
+        if (this->ball->passLeft(this->windowWidth, this->playableHeight)) {
+            this->counter1++;
+            this->rozstrel = true;
+        }
+        if (this->ball->passRight(this->windowWidth, this->playableHeight))  {
+            this->counter2++;
+            this->rozstrel = true;
         }
 
         if (rozstrel) {
