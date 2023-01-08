@@ -16,21 +16,18 @@ void Game::play() {
                 window.close();
         }
 
-
-
-
         //Controls
         if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) &&  !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             socketOut = "n";
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            this->player1.moveUp();
+            this->player1->moveUp();
             socketOut = "u";
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            this->player1.moveDown();
+            this->player1->moveDown();
             socketOut = "d";
         }
 
@@ -48,24 +45,24 @@ void Game::play() {
         socketIn = socketIn.substr(0,1);
         std::cout << "socket text " << socketIn << std::endl;
         if (strcmp(socketIn.c_str(), "u") == 0) {
-            this->player2.moveUp();
+            this->player2->moveUp();
         }
 
         if (strcmp(socketIn.c_str(), "d") == 0) {
-            this->player2.moveDown();
+            this->player2->moveDown();
         }
 
         //Basic logic
-        this->ball.reboundSides(this->playableHeight);
-        this->ball.passLeft(this->windowWidth, this->playableHeight) ? this->counter1++ : 0;
-        this->ball.passRight(this->windowWidth, this->playableHeight) ? this->counter2++ : 0;
+        this->ball->reboundSides(this->playableHeight);
+        this->ball->passLeft(this->windowWidth, this->playableHeight) ? this->counter1++ : 0;
+        this->ball->passRight(this->windowWidth, this->playableHeight) ? this->counter2++ : 0;
 
-        if (this->ball.getBallFloatRec().intersects(player1.getPlatformFloatRect())) {
-            this->ball.reboundPlatform();
+        if (this->ball->getBallFloatRec().intersects(player1->getPlatformFloatRect())) {
+            this->ball->reboundPlatform();
         }
 
-        if (this->ball.getBallFloatRec().intersects(this->player2.getPlatformFloatRect())) {
-            this->ball.reboundPlatform();
+        if (this->ball->getBallFloatRec().intersects(this->player2->getPlatformFloatRect())) {
+            this->ball->reboundPlatform();
         }
 
 
@@ -95,20 +92,28 @@ void Game::play() {
         textP2.setString(sSteam2.str());
 
         //Update
-        this->ball.update();
-        this->player1.update();
-        this->player2.update();
+        this->ball->update();
+        this->player1->update();
+        this->player2->update();
 
         //Draw
         window.clear(sf::Color::Black);
 
-        window.draw(this->player1.getPlatform());
-        window.draw(this->player2.getPlatform());
-        window.draw(this->ball.getBall());
+        window.draw(this->player1->getPlatform());
+        window.draw(this->player2->getPlatform());
+        window.draw(this->ball->getBall());
         window.draw(textP1);
         window.draw(textP2);
         window.display();
     }
+    delete this->socket;
+    delete this->player1;
+    delete this->player2;
+    delete this->ball;
+    this->player2 = nullptr;
+    this->player1 = nullptr;
+    this->ball = nullptr;
+    this->socket = nullptr;
 }
 
 void Game::operator()(void *gData, std::mutex& mutex) {
@@ -119,7 +124,4 @@ void Game::operator()(void *gData, std::mutex& mutex) {
     play();
 }
 
-Game::~Game() {
-    delete this->socket;
-    this->socket = nullptr;
-}
+
