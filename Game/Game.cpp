@@ -3,7 +3,7 @@
 Game::Game() = default;
 
 void Game::play() {
-    sf::RenderWindow window(sf::VideoMode(this->windowWidth, this->windowHeight), "Pong");
+    sf::RenderWindow window(sf::VideoMode(this->windowWidth, this->windowHeight), this->server? "Pong" : "client");
     std::string socketOut = "n";
     std::string socketIn = "n";
     char buffer[2000];
@@ -17,18 +17,34 @@ void Game::play() {
         }
 
         //Controls
-        if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) &&  !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            socketOut = "n";
-        }
+        if (this->server) {
+            if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                socketOut = "n";
+            }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            this->player1->moveUp();
-            socketOut = "u";
-        }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                this->server ? this->player1->moveUp() : this->player2->moveUp();
+                socketOut = "u";
+            }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            this->player1->moveDown();
-            socketOut = "d";
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+                this->server ? this->player1->moveDown() : this->player2->moveDown();
+                socketOut = "d";
+            }
+        } else {
+            if (!sf::Keyboard::isKeyPressed(sf::Keyboard::S) && !sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+                socketOut = "n";
+            }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+                this->server ? this->player1->moveUp() : this->player2->moveUp();
+                socketOut = "u";
+            }
+
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+                this->server ? this->player1->moveDown() : this->player2->moveDown();
+                socketOut = "d";
+            }
         }
 
 
@@ -45,11 +61,12 @@ void Game::play() {
         socketIn = socketIn.substr(0,1);
 
         if (strcmp(socketIn.c_str(), "u") == 0) {
-            this->player2->moveUp();
+            this->server ? this->player2->moveUp() : this->player1->moveUp();
+
         }
 
         if (strcmp(socketIn.c_str(), "d") == 0) {
-            this->player2->moveDown();
+            this->server ? this->player2->moveDown() : this->player1->moveDown();
         }
 
         //Basic logic
