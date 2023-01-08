@@ -6,7 +6,7 @@ sf::TcpSocket* client::runTcpClient(unsigned short port, std::string ip) {
 
     sf::IpAddress server = sf::IpAddress::getLocalAddress() ;
 
-    sf::TcpSocket* socket = new sf::TcpSocket;
+    auto* socket = new sf::TcpSocket;
 
 
     if (socket->connect(server, port) != sf::Socket::Status::Done)

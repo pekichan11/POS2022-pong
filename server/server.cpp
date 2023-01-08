@@ -3,9 +3,9 @@
 #include <iostream>
 #include "server.h"
 
-sf::TcpSocket* server::spustiServer(unsigned short port) {
+sf::TcpSocket* server::runServer(unsigned short port) {
 
-    sf::TcpSocket* socket = new sf::TcpSocket;
+    auto* socket = new sf::TcpSocket;
 
     char buffer[2000];
     std::size_t received;

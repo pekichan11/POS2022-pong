@@ -7,7 +7,7 @@
 class server {
 public:
     server() = default;
-    sf::TcpSocket* spustiServer(unsigned short port);
+    static sf::TcpSocket* runServer(unsigned short port);
 };
 
 
