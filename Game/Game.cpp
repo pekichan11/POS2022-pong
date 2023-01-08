@@ -40,10 +40,10 @@ void Game::play() {
             this->socket->receive(buffer, sizeof(buffer), recieved);
             this->socket->send(socketOut.c_str(), socketOut.length() + 1);
         }
-        std::cout << "Buffer : " << buffer << std::endl;
+
         socketIn = buffer;
         socketIn = socketIn.substr(0,1);
-        std::cout << "socket text " << socketIn << std::endl;
+
         if (strcmp(socketIn.c_str(), "u") == 0) {
             this->player2->moveUp();
         }
@@ -54,8 +54,33 @@ void Game::play() {
 
         //Basic logic
         this->ball->reboundSides(this->playableHeight);
-        this->ball->passLeft(this->windowWidth, this->playableHeight) ? this->counter1++ : 0;
-        this->ball->passRight(this->windowWidth, this->playableHeight) ? this->counter2++ : 0;
+        if (this->ball->passLeft(this->windowWidth, this->playableHeight)) {
+            this->counter1++;
+            this->rozstrel = true;
+        }
+        if (this->ball->passRight(this->windowWidth, this->playableHeight))  {
+            this->counter2++;
+            this->rozstrel = true;
+        }
+
+        if (rozstrel) {
+            this->player1->setPlatform(this->windowWidth - 20, this->windowHeight/2 - 100);
+            this->player2->setPlatform(10, this->windowHeight/2 - 100);
+
+            if(this->server) {
+                std::string out = (rand() % 2 == 0 ) ? "y" : "x";
+                this->socket->send(out.c_str(), out.length() + 1);
+                this->ball->changeVelocity(out);
+
+            } else {
+                std::string in;
+                this->socket->receive(buffer, sizeof(buffer), recieved);
+                in = buffer;
+                in = in.substr(0, 1);
+                this->ball->changeVelocity(in);
+            }
+            this->rozstrel = false;
+        }
 
         if (this->ball->getBallFloatRec().intersects(player1->getPlatformFloatRect())) {
             this->ball->reboundPlatform();

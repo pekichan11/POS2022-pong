@@ -33,3 +33,8 @@ void Platform::update() {
 
 Platform::~Platform() {
 }
+
+void Platform::setPlatform(int x, int y) {
+    this->platformPosition.y = y;
+    this->platformPosition.x = x;
+}
